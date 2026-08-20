@@ -1,0 +1,6 @@
+Material,Dye,Bandgap_eV,Concentration_mg_L,Time_min,Rate_constant
+MnSe,MB,2.1,20,120,0.012
+CoSe,MB,2.4,10,60,0.031
+MnCoSe,MB,2.7,20,90,0.025
+MnSe,MB,-1.0,20,120,0.015
+CoSe,MB,2.4,10,-30,0.031
