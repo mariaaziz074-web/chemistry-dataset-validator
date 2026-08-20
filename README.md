@@ -1,28 +1,33 @@
 # Chemistry Dataset Validator
 
-A lightweight Python tool for detecting common quality problems in chemistry datasets.
+A Python-based validation tool for checking the quality and consistency of chemistry datasets before analysis or machine-learning workflows.
 
-## Problem
+## Features
 
-Experimental chemistry datasets can contain missing values, duplicate rows, incorrect data types, missing required columns, or physically invalid negative values.
+- Checks required columns
+- Detects missing values
+- Detects duplicate rows
+- Detects negative physical/experimental values
+- Provides clear validation errors
+- Includes automated tests with pytest
 
-This project provides a simple automated validation workflow for a CSV dataset.
+## Current Validation Rules
 
-## Approach
+The validator currently checks:
 
-The validator uses Pandas to:
+- `Material`
+- `Dye`
+- `Bandgap_eV`
+- `Concentration_mg_L`
+- `Time_min`
+- `Rate_constant`
 
-- Check required columns
-- Report dataset dimensions
-- Detect missing values
-- Detect duplicate rows
-- Inspect numerical data types
-- Detect negative values in numerical chemistry variables
-- Return PASSED or FAILED validation status
+It flags scientifically invalid negative values for parameters where negative values are not physically meaningful.
 
 ## Installation
 
-Create and activate a virtual environment:
+Clone the repository:
 
 ```bash
-python -m venv .venv-1
+git clone https://github.com/mariaaziz074-web/chemistry-dataset-validator.git
+cd chemistry-dataset-validator
