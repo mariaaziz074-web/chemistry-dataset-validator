@@ -8,7 +8,7 @@ A Python-based validation tool for checking the quality and consistency of chemi
 - Detects missing values
 - Detects duplicate rows
 - Detects non-finite numeric values (`inf` and `-inf`)
-- Detects negative physical/experimental values
+- Detects variable-specific physically invalid values
 - Provides clear validation errors
 - Includes automated tests with pytest
 
@@ -23,7 +23,7 @@ The validator currently checks:
 - `Time_min`
 - `Rate_constant`
 
-It flags non-finite numeric values and scientifically invalid negative values for parameters where negative values are not physically meaningful.
+It flags non-finite numeric values and values that violate defined variable-specific physical constraints.
 
 ## Installation
 
